@@ -18,7 +18,10 @@ const httpServer = app.listen(PORT, () => {
 })
 
 const socketServer = new Server(httpServer)
-
+app.use((err, req, res, next) => {
+    console.log(err.stack)
+    res.status(500).send('Ha ocurrido un error')
+})
 
 app.use(express.json())
 app.use(express.urlencoded({ extended: true }))
