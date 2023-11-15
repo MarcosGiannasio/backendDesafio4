@@ -9,7 +9,7 @@ import ProductManager from "./components/productManager.js"
 
 
 
-const PORT = 8080
+const PORT = 2090
 const productManager = new ProductManager("/files/products.json")
 const app = express()
 
